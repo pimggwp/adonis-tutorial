@@ -1,0 +1,54 @@
+@layout('layouts.application')
+
+@section('title')
+<title>User | TrexCode Tutorial</title>
+@endsection
+
+@section('content')
+  <div class="row">
+      <div class="col-md-12">
+        <a href="{{ route('users.create') }}" class="btn btn-success float-right mb-3">Add a new user</a>
+      </div>
+      <div class="col-md-12">
+            <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col" style="width: 65%">Name</th>
+                        <th scope="col">Age</th>
+                        <th scope="col">Handle</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>Petch</td>
+                        <td>20</td>
+                        <td>
+                            <a href="{{  route('users.edit', {id: 1}) }}" class="btn btn-sm btn-outline-success">Edit</a>
+                            <a href="#" class="btn btn-sm btn-outline-danger">Delete</a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>Tong</td>
+                        <td>20</td>
+                        <td>
+                                <a href="{{  route('users.edit', {id: 2}) }}" class="btn btn-sm btn-outline-success">Edit</a>
+                                <a href="#" class="btn btn-sm btn-outline-danger">Delete</a>
+                            </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">3</th>
+                        <td>P'Kuan</td>
+                        <td>26</td>
+                        <td>
+                                <a href="{{  route('users.edit', {id: 3}) }}" class="btn btn-sm btn-outline-success">Edit</a>
+                                <a href="#" class="btn btn-sm btn-outline-danger">Delete</a>
+                            </td>
+                      </tr>
+                    </tbody>
+                  </table>
+      </div>
+  </div>
+@endsection

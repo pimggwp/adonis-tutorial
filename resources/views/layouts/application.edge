@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    {{ style('assets/css/bootstrap.min') }}
+
+    @!section('title')
+  </head>
+  <body>
+    @include('layouts.includes.navbar')      
+    <div class="container mt-4">
+        @!section('content')
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    {{ script('assets/js/jquery-3.3.1.slim.min') }}
+    {{ script('assets/js/popper.min') }}
+    {{ script('assets/js/bootstrap.min') }}
+  </body>
+</html>
